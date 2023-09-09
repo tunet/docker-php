@@ -27,5 +27,5 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: tunet/php:${{ env.PHP_VERSION }}-fpm-alpine3.18
+          tags: tunet/php:${{ env.PHP_VERSION }}
           build-args: PHP_VERSION=${{ env.PHP_VERSION }}

@@ -1,6 +1,6 @@
 ARG PHP_VERSION
 
-FROM php:${PHP_VERSION}-fpm-alpine3.18
+FROM php:${PHP_VERSION}
 
 RUN apk update \
     && apk add --no-cache --virtual .build-deps \
