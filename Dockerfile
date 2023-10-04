@@ -18,6 +18,8 @@ RUN apk update \
     && docker-php-ext-enable apcu \
     && docker-php-ext-install pdo_pgsql \
     && docker-php-ext-install intl \
+    && docker-php-ext-configure pcntl --enable-pcntl \
+    && docker-php-ext-install pcntl \
     && pecl clear-cache \
     && rm -rf /tmp/* /var/cache/apk/* \
     && apk del .build-deps
