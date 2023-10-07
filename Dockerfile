@@ -15,7 +15,9 @@ RUN apk update \
     && pecl update-channels \
     && pecl install \
         apcu \
+        redis \
     && docker-php-ext-enable apcu \
+    && docker-php-ext-enable redis \
     && docker-php-ext-install pdo_pgsql \
     && docker-php-ext-install intl \
     && docker-php-ext-configure pcntl --enable-pcntl \
