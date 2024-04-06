@@ -9,4 +9,5 @@ build-and-push:
 		--tag tunet/php:${PHP_VERSION} \
 		-f ./Dockerfile \
 		--build-arg PHP_VERSION=${PHP_VERSION} \
+		--build-arg SWOOLE_VERSION=${SWOOLE_VERSION} \
 		.
