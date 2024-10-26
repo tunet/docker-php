@@ -7,13 +7,13 @@ ARG SWOOLE_VERSION
 RUN apk update && \
     apk add --no-cache --virtual .build-deps \
         $PHPIZE_DEPS \
-        postgresql-dev \
-        brotli-dev && \
+        postgresql-dev && \
     apk add --no-cache \
         icu-dev \
         make \
         postgresql-libs \
-        postgresql-client && \
+        postgresql-client \
+        brotli-dev && \
     docker-php-ext-install opcache && \
     pecl update-channels && \
     pecl install \
