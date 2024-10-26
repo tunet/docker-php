@@ -7,7 +7,8 @@ ARG SWOOLE_VERSION
 RUN apk update && \
     apk add --no-cache --virtual .build-deps \
         $PHPIZE_DEPS \
-        postgresql-dev && \
+        postgresql-dev \
+        brotli-dev && \
     apk add --no-cache \
         icu-dev \
         make \
